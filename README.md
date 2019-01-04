@@ -8,7 +8,7 @@ Acknowledgements: The entire [Keras team](https://github.com/keras-team/keras).
 How To Use:
 1. (Optionally) install using (e.g. ```python setup.py install ```)
 2. Import the selected callback (e.g. ```from callbacks.timer import Timer```)
-3. Configure the callback (e.g. ```stop_time = t = Timer(datetime.strptime("201801010001","%Y%m%d%H%M%S"))```)
+3. Configure the callback (e.g. ```stop_time = Timer(datetime.strptime("201801010001","%Y%m%d%H%M%S"))```)
 4. Add the callback to your callbacks_list (e.g. ```cb_list = list(Timer(stop_time))```)
 5. Add your callbacks list to your training session (e.g. ```model.fit(x, y, callbacks=cb_list)```)
 
