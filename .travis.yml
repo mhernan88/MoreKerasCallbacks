@@ -1,0 +1,17 @@
+language: python
+python:
+  - "3.4"
+  - "3.5"
+  - "3.6"
+
+install:
+  - pip install -r requirements-dev.txt
+  - python setup.py install
+
+script:
+  - python tests/good_neural_network.py
+  - nosetests tests/test_memory_model_checkpoint.py --with-coverage
+  - nosetests tests/test_timer.py --with-coverage
+
+after_success:
+  - codecov
