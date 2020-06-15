@@ -51,7 +51,7 @@ class MemoryModelCheckpoint(ModelCheckpoint):
                  save_best_only, save_weights_only, mode, period)
 
         if (score is None and tensorboard_logfile is None) or (score is not None and tensorboard_logfile is not None):
-            raise Exception("Either (XOR) scroe or logfile must be provided.")
+            raise Exception("Either (XOR) score or logfile must be provided.")
         elif score is not None:
             self.best = score
         elif tensorboard_logfile is not None:
